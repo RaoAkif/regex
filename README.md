@@ -1,5 +1,7 @@
 <h1 align="center"> REGEX </h1>
 
+### Remove That's not Required
+
 #### Removing `a-z`, `A-Z`, `0-9`
 ```
 string = string.replace(/[a-z]/g, '')       //      Remove the small-caps chars
@@ -15,6 +17,8 @@ string = string.replace(/[0-9]/g, '')       //      Remove the integers
 ```
 string = string.replace(/[^0-9a-zA-Z]/g, '')
 ```
+
+### Match What's Needed
 
 #### Only Numbers
 ```
