@@ -3,7 +3,11 @@
 #### Removing `a-z`, `A-Z`, `0-9`
 ```
 string = string.replace(/[a-z]/g, '')       //      Remove the small-caps chars
+```
+```
 string = string.replace(/[A-Z]/g, '')       //      Remove the big-caps chars
+```
+```
 string = string.replace(/[0-9]/g, '')       //      Remove the integers
 ```
 
