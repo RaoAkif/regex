@@ -134,6 +134,13 @@ console.log(outputString);
 
 #### A(5) Answer
 ```
+const inputString = "The product costs $25 and the quantity is 10.";
+
+const stringWithLeadingZeros = inputString.replace(/\d+/g, (match) => {   //   \d+ pattern matching one or more digits
+  return match.padStart(3, '0');
+});
+
+console.log(stringWithLeadingZeros);
 ```
 
 
