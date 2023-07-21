@@ -60,7 +60,7 @@ These simple questions should help you practice and get comfortable with using r
 
 These simple practice questions should help you get started with regular expressions and familiarize yourself with the `.replace()` and `.match()` methods. Remember to experiment with different patterns and flags to build your confidence in using regex effectively.
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ----------------------------------------------------------------------------------
 
