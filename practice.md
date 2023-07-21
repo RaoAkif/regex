@@ -134,6 +134,17 @@ console.log(outputString);
 
 #### A(5) Answer
 ```
+const inputString = "I like dot. in my sentences.";
+
+// Using the replace() function with a regular expression (with the dot escaped)
+const replacedString = inputString.replace(/dot\./g, "period");
+
+console.log(replacedString);
+```
+
+
+#### A(6) Answer
+```
 const inputString = "The product costs $25 and the quantity is 10.";
 
 const stringWithLeadingZeros = inputString.replace(/\d+/g, (match) => {   //   \d+ pattern matching one or more digits
@@ -144,13 +155,17 @@ console.log(stringWithLeadingZeros);
 ```
 
 
-#### A(6) Answer
-```
-```
-
-
 #### A(7) Answer
 ```
+const inputString = "The bird flew away, and the cat chased a mouse.";
+
+// Using the replace() function with a regular expression and a callback function
+const replacedString = inputString.replace(/bird|cat/g, match => {
+  return match === 'bird' ? 'dove' : 'kitten';
+});
+
+console.log(replacedString);
+
 ```
 
 
