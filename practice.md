@@ -165,13 +165,20 @@ const replacedString = inputString.replace(/bird|cat/g, match => {
 });
 
 console.log(replacedString);
-
 ```
-
 
 
 #### A(8) Answer
 ```
+const inputString = "The event date is 21/07/2023.";
+
+// Using the replace() function with a regular expression and named capture groups
+const replacedString = inputString.replace(
+  /(?<day>\d{2})\/(?<month>\d{2})\/(?<year>\d{4})/g,
+  "$<year>-$<month>-$<day>"
+);
+
+console.log(replacedString);
 ```
 
 
