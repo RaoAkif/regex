@@ -71,6 +71,7 @@ These simple practice questions should help you get started with regular express
 ## SOLUTIONS
 
 #### A(1) Answer
+```
 const string = "I have an apple and a green apple."
 
 const regex = /apple/g
@@ -78,3 +79,5 @@ const regex = /apple/g
 const newString = string.replace(regex, "orange")
 
 console.log(newString)
+```
+
