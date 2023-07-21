@@ -81,3 +81,82 @@ const newString = string.replace(regex, "orange")
 console.log(newString)
 ```
 
+
+#### A(2) Answer
+```
+```
+
+
+#### A(3) Answer
+```
+```
+
+
+#### A(4) Answer
+```
+```
+
+
+#### A(5) Answer
+```
+```
+
+
+#### A(6) Answer
+```
+```
+
+
+#### A(7) Answer
+```
+```
+
+
+
+#### A(8) Answer
+```
+```
+
+
+#### B(1) Answer
+```
+```
+
+#### B(2) Answer
+```
+```
+
+
+#### B(3) Answer
+```
+```
+
+#### B(4) Answer
+```
+```
+
+
+#### B(5) Answer
+```
+```
+
+#### B(6) Answer
+```
+```
+
+
+#### B(7) Answer
+```
+```
+
+#### B(8) Answer
+```
+```
+
+#### B(9) Answer
+```
+```
+
+#### B(10) Answer
+```
+```
