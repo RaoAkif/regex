@@ -97,11 +97,32 @@ console.log(outputString);
 
 #### A(3) Answer
 ```
+const inputString = "The sky is blue, and the flower is red.";
+const regex = /red|blue/gi;
+const replacement = "green";
+
+const outputString = inputString.replace(regex, replacement);
+
+console.log(outputString);
+```
+
+```
+Replacing multiple patterns: Question: Replace "red" with "white"
+and "blue" with "green" in the string: "The sky is blue, and the flower is red."
+
+const inputString = "The sky is blue, and the flower is red.";
+
+const outputString = inputString
+  .replace(/red/gi, "white")
+  .replace(/blue/gi, "green");
+
+console.log(outputString);
 ```
 
 
 #### A(4) Answer
 ```
+
 ```
 
 
