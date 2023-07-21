@@ -121,10 +121,16 @@ console.log(outputString);
 
 
 #### A(4) Answer
-```
 
 ```
+const inputString = "My name is John Doe, and I like John Doe.";
+const regex = /(\bJohn\b)\s(\bDoe\b)/gi;
+const replacement = "$2, $1";
 
+const outputString = inputString.replace(regex, replacement);
+
+console.log(outputString);
+```
 
 #### A(5) Answer
 ```
