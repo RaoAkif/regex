@@ -68,26 +68,23 @@ These simple practice questions should help you get started with regular express
 
 #### A(1) Answer
 ```
-const string = "I have an apple and a green apple."
-
-const regex = /apple/g
-
-const newString = string.replace(regex, "orange")
-
-console.log(newString)
+const string = "I have an apple and a green apple.";
+const regex = /apple/g;
+const newString = string.replace(regex, "orange");
+console.log(newString); // Output: "I have an orange and a green orange."
 ```
 
 
 #### A(2) Answer
 ```
 const inputString = "Hello, World! hello, everyone!, Nice to write hello again Hello";
-const regex = /\bHello\b/g;  // It will pick both "hello" and "Hello" |  \b   is to mention the boundary 
+const regex = /\bHello\b/g;
 
 const outputString = inputString.replace(regex, (match) => {
   return match.charAt(0).toUpperCase() === 'H' ? 'Hi' : 'hi';
 });
 
-console.log(outputString);
+console.log(outputString); // Output: "Hi, World! hi, everyone!, Nice to write hi again Hi"
 ```
 
 
@@ -99,7 +96,7 @@ const replacement = "green";
 
 const outputString = inputString.replace(regex, replacement);
 
-console.log(outputString);
+console.log(outputString); // Output: "The sky is green, and the flower is green."
 ```
 
 ```
@@ -107,12 +104,11 @@ console.log(outputString);
 and "blue" with "green" in the string: "The sky is blue, and the flower is red." */
 
 const inputString = "The sky is blue, and the flower is red.";
-
 const outputString = inputString
   .replace(/red/gi, "white")
   .replace(/blue/gi, "green");
 
-console.log(outputString);
+console.log(outputString); // Output: "The sky is green, and the flower is white."
 ```
 
 
@@ -122,109 +118,96 @@ console.log(outputString);
 const inputString = "My name is John Doe, and I like John Doe.";
 const regex = /(\bJohn\b)\s(\bDoe\b)/gi;
 const replacement = "$2, $1";
-
 const outputString = inputString.replace(regex, replacement);
 
-console.log(outputString);
+console.log(outputString); // Result: "My name is Doe, John, and I like Doe, John."
 ```
 
 #### A(5) Answer
 ```
 const inputString = "I like dot. in my sentences.";
-
-// Using the replace() function with a regular expression (with the dot escaped)
 const replacedString = inputString.replace(/dot\./g, "period");
 
-console.log(replacedString);
+console.log(replacedString); // Output: "I like period in my sentences."
 ```
 
 
 #### A(6) Answer
 ```
 const inputString = "The product costs $25 and the quantity is 10.";
-
-const stringWithLeadingZeros = inputString.replace(/\d+/g, (match) => {   //   \d+ pattern matching one or more digits
+const stringWithLeadingZeros = inputString.replace(/\d+/g, (match) => {
   return match.padStart(3, '0');
 });
 
 console.log(stringWithLeadingZeros);
+// Output: "The product costs $025 and the quantity is 010."
 ```
 
 
 #### A(7) Answer
 ```
 const inputString = "The bird flew away, and the cat chased a mouse.";
-
-// Using the replace() function with a regular expression and a callback function
 const replacedString = inputString.replace(/bird|cat/g, match => {
   return match === 'bird' ? 'dove' : 'kitten';
 });
 
 console.log(replacedString);
+// Output: "The dove flew away, and the kitten chased a mouse."
 ```
 
 
 #### A(8) Answer
 ```
 const inputString = "The event date is 21/07/2023.";
-
-// Using the replace() function with a regular expression and named capture groups
 const replacedString = inputString.replace(
   /(?<day>\d{2})\/(?<month>\d{2})\/(?<year>\d{4})/g,
   "$<year>-$<month>-$<day>"
 );
 
 console.log(replacedString);
+// Output: "The event date is 2023-07-21."
 ```
 
 
 #### B(1) Answer
 ```
 const inputString = "I have an apple and a banana.";
-
-// Using the match() function with a regular expression
 const occurrences = inputString.match(/apple/g);
 
-console.log(occurrences);
+console.log(occurrences); // Output: ["apple"]
 ```
 
 ```
 const string = "Size: 64GB<i class='a-icon a-icon-text-separator' role='img' aria-label='|'></i>Color: Purple<i class='a-icon a-icon-text-separator' role='img' aria-label='|'></i>Service Provider: Unlocked<i class='a-icon a-icon-text-separator' role='img' aria-label='|'></i>Product grade: Renewed";
 
-const occurrences = string.match(/(class=')(.*?)('|')/g)
+const occurrences = string.match(/(class=')(.*?)('|')/g);
 
-console.log(occurrences);
+console.log(occurrences); // Output: ["class='a-icon a-icon-text-separator'", "class='a-icon a-icon-text-separator'", "class='a-icon a-icon-text-separator'"]
 ```
 
 #### B(2) Answer
 ```
 const inputString = "I have a Book and a book.";
-
-// Using the match() function with a case-insensitive regular expression
 const occurrences = inputString.match(/book/gi);
 
-console.log(occurrences
+console.log(occurrences); // Output: ["Book", "book"]
 ```
 
 
 #### B(3) Answer
 ```
 const inputString = "The product costs $25 and the quantity is 100.";
-
-// Using the match() function with a regular expression to extract numbers
 const numbers = inputString.match(/\d+/g);
 
-console.log(numbers);
+console.log(numbers); // Output: ["25", "100"]
 ```
 
 #### B(4) Answer
 ```
 const inputString = "The sky is blue, and the flower is red.";
-
-// Using the match() function with a regular expression to find occurrences of "red" or "blue"
 const occurrences = inputString.match(/red|blue/gi);
 
-console.log(occurrences);
+console.log(occurrences); // Output: ["blue", "red"]
 ```
 
 
