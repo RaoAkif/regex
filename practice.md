@@ -1,7 +1,7 @@
 Practice Questions:
 Sure! Here are the simplest questions for each of the cases to practice with:
 
-**Regex questions for `.replace()` method:**
+**A. Regex questions for `.replace()` method:**
 
 1. **Basic substitution:**
    Question: Replace all occurrences of the word "apple" with "orange" in the string: "I have an apple and a green apple."
@@ -29,7 +29,7 @@ Sure! Here are the simplest questions for each of the cases to practice with:
 
 These simple questions should help you practice and get comfortable with using regular expressions and the `.replace()` method for various scenarios. Happy practicing!
 
-**Regex questions for `.match()` method:**
+**B. Regex questions for `.match()` method:**
 
 1. **Simple pattern matching:**
    Question: Find all occurrences of the word "apple" in the string: "I have an apple and a banana."
@@ -62,3 +62,19 @@ These simple questions should help you practice and get comfortable with using r
     Question: Find all occurrences of "hi" or "hello" without capturing the individual matches in the string: "Hi there, hello!"
 
 These simple practice questions should help you get started with regular expressions and familiarize yourself with the `.replace()` and `.match()` methods. Remember to experiment with different patterns and flags to build your confidence in using regex effectively.
+
+
+
+
+----------------------------------------------------------------------------------
+
+## SOLUTIONS
+
+#### A(1) Answer
+const string = "I have an apple and a green apple."
+
+const regex = /apple/g
+
+const newString = string.replace(regex, "orange")
+
+console.log(newString)
