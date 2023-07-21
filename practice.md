@@ -107,8 +107,8 @@ console.log(outputString);
 ```
 
 ```
-Replacing multiple patterns: Question: Replace "red" with "white"
-and "blue" with "green" in the string: "The sky is blue, and the flower is red."
+/* Replacing multiple patterns: Question: Replace "red" with "white"
+and "blue" with "green" in the string: "The sky is blue, and the flower is red." */
 
 const inputString = "The sky is blue, and the flower is red.";
 
