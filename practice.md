@@ -55,14 +55,10 @@ These simple questions should help you practice and get comfortable with using r
 8. **Global matching:**
    Question: Find all occurrences of the word "hello" in the string: "hello hello hello" using the global flag.
 
-9. **Match information:**
-   Question: Find the index of the first occurrence of "apple" in the string: "I have an apple and a banana."
-
-10. **Non-capturing groups:**
+9. **Non-capturing groups:**
     Question: Find all occurrences of "hi" or "hello" without capturing the individual matches in the string: "Hi there, hello!"
 
 These simple practice questions should help you get started with regular expressions and familiarize yourself with the `.replace()` and `.match()` methods. Remember to experiment with different patterns and flags to build your confidence in using regex effectively.
-
 
 
 
@@ -184,43 +180,112 @@ console.log(replacedString);
 
 #### B(1) Answer
 ```
+const inputString = "I have an apple and a banana.";
+
+// Using the match() function with a regular expression
+const occurrences = inputString.match(/apple/g);
+
+console.log(occurrences);
+```
+
+```
+const string = "Size: 64GB<i class='a-icon a-icon-text-separator' role='img' aria-label='|'></i>Color: Purple<i class='a-icon a-icon-text-separator' role='img' aria-label='|'></i>Service Provider: Unlocked<i class='a-icon a-icon-text-separator' role='img' aria-label='|'></i>Product grade: Renewed";
+
+const occurrences = string.match(/(class=')(.*?)('|')/g)
+
+console.log(occurrences);
 ```
 
 #### B(2) Answer
 ```
+const inputString = "I have a Book and a book.";
+
+// Using the match() function with a case-insensitive regular expression
+const occurrences = inputString.match(/book/gi);
+
+console.log(occurrences
 ```
 
 
 #### B(3) Answer
 ```
+const inputString = "The product costs $25 and the quantity is 100.";
+
+// Using the match() function with a regular expression to extract numbers
+const numbers = inputString.match(/\d+/g);
+
+console.log(numbers);
 ```
 
 #### B(4) Answer
 ```
+const inputString = "The sky is blue, and the flower is red.";
+
+// Using the match() function with a regular expression to find occurrences of "red" or "blue"
+const occurrences = inputString.match(/red|blue/gi);
+
+console.log(occurrences);
 ```
 
 
 #### B(5) Answer
 ```
+NULL Solution
 ```
 
 #### B(6) Answer
 ```
+const str = "The event dates are 01/05/2023 and 15/06/2023.";
+const pattern = /\b(\d{2}\/\d{2}\/\d{4})\b/g;
+
+const matches = str.match(pattern);
+
+console.log(matches); // Output: ["01/05/2023", "15/06/2023"]
 ```
 
 
 #### B(7) Answer
 ```
+const phoneNumber = "(123) 456-7890";
+const pattern = /\((?<areaCode>\d{3})\)\s(?<localNumber>\d{3}-\d{4})/;
+
+const match = phoneNumber.match(pattern);
+
+if (match) {
+  const areaCode = match.groups.areaCode;
+  const localNumber = match.groups.localNumber;
+
+  console.log("Area Code:", areaCode); // Output: Area Code: 123
+  console.log("Local Number:", localNumber); // Output: Local Number: 456-7890
+} else {
+  console.log("Invalid phone number format.");
+}
 ```
 
 #### B(8) Answer
 ```
+const phoneNumber = "(123) 456-7890";
+const pattern = /\((?<areaCode>\d{3})\)\s(?<localNumber>\d{3}-\d{4})/;
+
+const match = phoneNumber.match(pattern);
+
+if (match) {
+  const areaCode = match.groups.areaCode;
+  const localNumber = match.groups.localNumber;
+
+  console.log("Area Code:", areaCode); // Output: Area Code: 123
+  console.log("Local Number:", localNumber); // Output: Local Number: 456-7890
+} else {
+  console.log("Invalid phone number format.");
+}
 ```
 
 #### B(9) Answer
 ```
-```
+const str = "Hi there, hello!";
+const pattern = /(?:hi|hello)/gi;
 
-#### B(10) Answer
-```
+const matches = str.match(pattern);
+
+console.log(matches); // Output: ["Hi", "hello"]
 ```
