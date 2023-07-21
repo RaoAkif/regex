@@ -84,6 +84,14 @@ console.log(newString)
 
 #### A(2) Answer
 ```
+const inputString = "Hello, World! hello, everyone!, Nice to write hello again Hello";
+const regex = /\bHello\b/g;     // It will pick both "hello" and "Hello"
+
+const outputString = inputString.replace(regex, (match) => {
+  return match.charAt(0).toUpperCase() === 'H' ? 'Hi' : 'hi';
+});
+
+console.log(outputString);
 ```
 
 
